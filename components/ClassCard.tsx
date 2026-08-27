@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function ClassCard({grade,title='Theory Class',fee='Set by teacher'}:{grade:string;title?:string;fee?:string}){return <article className="card classCard"><div><span className="tag">2026 INTAKE</span><h3>{grade}</h3><p>{title}</p></div><div><div className="fee">Monthly fee: <b>{fee}</b></div><div className="actions"><Link className="btn primary" href={`/payment?class=${encodeURIComponent(grade+' — '+title)}`}>Pay / Submit Slip</Link><Link className="btn ghost" href="/login">Resources</Link></div></div></article>}
